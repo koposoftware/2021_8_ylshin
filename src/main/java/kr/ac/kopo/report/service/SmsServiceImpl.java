@@ -12,6 +12,7 @@ import kr.ac.kopo.report.vo.SmsVO;
 import net.nurigo.java_sdk.api.Message;
 import net.nurigo.java_sdk.exceptions.CoolsmsException;
 
+//@Component
 @Service
 public class SmsServiceImpl{
 	
@@ -20,6 +21,7 @@ public class SmsServiceImpl{
 	private ReportDAO reportDAO;
 	
 	
+	//@Scheduled(cron=0 0/5 * * *)
 	public void smsCreate() {
 		List<SmsVO> smsList = reportDAO.smsList();
 		System.out.println(smsList);
@@ -33,17 +35,18 @@ public class SmsServiceImpl{
 		while(i < smsList.size()) {
 			String name = smsList.get(i).getName();
 			String tel = smsList.get(i).getTel();
-			String accountNo = smsList.get(i).getAccountNo();
+			//String accountNo = smsList.get(i).getAccountNo();
 			String category = smsList.get(i).getCategory();
 			int penaltyMoney = smsList.get(i).getPenaltyMoney();
-			int logCode = smsList.get(i).getLogCode();
+			//int logCode = smsList.get(i).getLogCode();
 			
 			
 			
 			String text = "[하나은행]\n";
-			text += "홍길동님 [쇼핑 줄이기] 초과소비 패널티 발생!\n";
+			text += name +" 님 [" +category+ "줄이기] 초과소비 패널티 발생!\n";
 			text += "이동 : 생활금 → 비상금\n";
 			text += "[" + penaltyMoney +"원]";
+			
 			
 			System.out.println("text : \n"+text);
 			
@@ -77,5 +80,7 @@ public class SmsServiceImpl{
 		
 		reportDAO.changeFlag(smsList);
 	}
-}
+		
+		
+	}
 }

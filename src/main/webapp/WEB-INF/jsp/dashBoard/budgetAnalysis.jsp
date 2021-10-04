@@ -1,5 +1,6 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8"
     pageEncoding="UTF-8"%>
+<%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
 <%@ taglib prefix="fmt" uri="http://java.sun.com/jsp/jstl/fmt" %>
 <!DOCTYPE html>
 <html lang="en">
@@ -304,9 +305,28 @@ $(document).ready(function(){
 				                  <div class ="feedback-text col-md-4" style="font-size : 25px; padding-top : 110px;"> 
 				                  	또래 사용자보다<br><br>
 					                  <q> 생활비는
-					                  <b style="font-size : 32px;"> 35만원 많이 </b>쓰고
+					                  <b style="font-size : 32px;"> ${(myMonthlyBudget.consumption - agesAvgBudget.consumption) /10000}  만원 
+					                   <c:choose>
+                     				<c:when test= "${ myMonthlyBudget.consumption- agesAvgBudget.consumption) gt 0}">
+					                  많이  
+					                  </c:when>
+					                  <c:otherwise>
+					                  	적게
+					                  </c:otherwise>
+					                  </c:choose>
+					                  
+					                  </b>쓰고
 					                  <br>저축은 
-					                  <b style="font-size : 32px;"> 17만원 적게 </b>해요 </q>
+					                  <b style="font-size : 32px;"> (${myMonthlyBudget.saving} -${agesAvgBudget.saving})/10000 만원 
+					                     <c:choose>
+                     				<c:when test= "${ myMonthlyBudget.saving- agesAvgBudget.saving) gt 0}">
+					                  많이  
+					                  </c:when>
+					                  <c:otherwise>
+					                  	적게
+					                  </c:otherwise>
+					                  </c:choose>
+					                  </b>해요 </q>
 				                  </div>
 				       
 				            </div>
@@ -328,9 +348,27 @@ $(document).ready(function(){
 				                <div class ="feedback-text col-md-4" style="font-size : 25px; padding-top : 110px;"> 
 				                  	비슷한 급여의 사용자보다<br><br>
 					                  <q> 생활비는
-					                  <b style="font-size : 32px;"> 20만원 많이 </b>쓰고
+					                    <b style="font-size : 32px;"> ${(myMonthlyBudget.consumption - salaryAvgBudget.consumption) /10000}  만원 
+					                   <c:choose>
+                     				<c:when test= "${ myMonthlyBudget.consumption- agesAvgBudget.consumption) gt 0}">
+					                  많이  
+					                  </c:when>
+					                  <c:otherwise>
+					                  	적게
+					                  </c:otherwise>
+					                  </c:choose>
+					                  
+					                  </b>쓰고
 					                  <br>저축은 
-					                  <b style="font-size : 32px;"> 60만원 적게 </b>해요 </q>
+					                  <b style="font-size : 32px;"> ${(myMonthlyBudget.saving - agesAvgBudget.saving) /10000}</b>만원 
+					                     <c:choose>
+                     				<c:when test= "${ myMonthlyBudget.saving- salaryAvgBudget.saving) gt 0}">
+					                  많이  
+					                  </c:when>
+					                  <c:otherwise>
+					                  	적게
+					                  </c:otherwise>
+					                  </c:choose>해요 </q>
 				                  </div>
 				            </div>
 				 	
@@ -443,6 +481,13 @@ $(document).ready(function(){
 		/*----------------------------------------*/
 		/*  2.  Bar Chart vertical
 		/*----------------------------------------*/
+		
+		
+		let salaryAvgFixedExpense = ${salaryAvgBudget.fixedExpense}/10000
+		let salaryAvgConsumption = ${salaryAvgBudget.consumption}/10000
+		let salaryAvgSaving = ${salaryAvgBudget.saving}/10000
+		
+		
 		var ctx = document.getElementById("barchart2");
 		var barchart2 = new Chart(ctx, {
 			type: 'bar',
@@ -450,7 +495,7 @@ $(document).ready(function(){
 				labels: ["기본금", "생활금", "비상금"],
 				datasets: [{
 	                label: '비슷한 급여 사용자',
-					data: [55, 100, 160],
+					data: [salaryAvgFixedExpense, salaryAvgConsumption, salaryAvgSaving],
 					borderWidth: 1,
 					   backgroundColor:
 		                	'#d6d5d5',

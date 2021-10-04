@@ -2,6 +2,7 @@ package kr.ac.kopo.report.dao;
 
 import java.util.List;
 
+import kr.ac.kopo.challenge.vo.ChallengeVO;
 import kr.ac.kopo.dashBoard.vo.MonthlyBudgetVO;
 import kr.ac.kopo.report.vo.ReportVO;
 import kr.ac.kopo.report.vo.SmsVO;
@@ -24,4 +25,6 @@ public interface ReportDAO {
 	
 	//실제 사용 기본,생활,비상금
 	MonthlyBudgetVO realSpent(String accountNo);
+
+	List<ChallengeVO> challengeList(String accountNo);
 }

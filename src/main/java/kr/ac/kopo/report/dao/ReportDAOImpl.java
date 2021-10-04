@@ -6,6 +6,7 @@ import org.mybatis.spring.SqlSessionTemplate;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Repository;
 
+import kr.ac.kopo.challenge.vo.ChallengeVO;
 import kr.ac.kopo.dashBoard.vo.MonthlyBudgetVO;
 import kr.ac.kopo.report.vo.ReportVO;
 import kr.ac.kopo.report.vo.SmsVO;
@@ -49,6 +50,12 @@ public class ReportDAOImpl implements ReportDAO{
 	public MonthlyBudgetVO realSpent(String accountNo) {
 		MonthlyBudgetVO realSpent = sqlSessionTemplate.selectOne("report.ReportDAO.realSpent", accountNo);
 		return realSpent;
+	}
+
+	public List<ChallengeVO> challengeList(String accountNo) {
+		List<ChallengeVO> challengeList = sqlSessionTemplate.selectList("report.ReportDAO.challengeList",accountNo);
+		
+		return challengeList;
 	}
 
 

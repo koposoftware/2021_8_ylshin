@@ -5,32 +5,7 @@
 <mapper namespace="spending.SpendingDAO">
 
 
-	
-<!-- 	<resultMap type="transactionHistoryVO" id="transactionHistoryMap">
-		<result column="transaction_no" property="transactionNo"/>
-		<result column="transaction_code" property="transCode"/>
-		<result column="my_acc_no" property="myAccNo"/>
-		<result column="trans_money" property="transMoney"/>
-		<result column="balance" property="balance"/>
-		<result column="transaction_info" property="transInfo"/>
-		<result column="others_name" property="othersName"/>
-		<result column="transaction_date" property="transDate"/>
-		<result column="category" property="category"/>
-	</resultMap> -->
-	
-<!-- 	<resultMap type="kr.ac.kopo.spending.vo.SpendingInfoVO" id="spendingInfoMap">
-		<result column="account_no" property="accountNo"/>
-		<result column="" property=""/>
-	</resultMap> -->
-	
-<!-- 	<select id="spendingByCategory" parameterType="string" resultMap="transactionHistoryMap">
-		select category, -sum(trans_money) as trans_money
-			from tbl_transaction_history
-			where my_acc_no='081000000010' and to_char(transaction_date, 'yy/mm') = '21/09'
-			and transaction_code = '11005'
-		group by category
-	</select> -->
-	
+
 	<resultMap type="calendarVO" id="calendarMap">
 		<result column="start_date" property="start" />
 		<result column="title" property="title" />

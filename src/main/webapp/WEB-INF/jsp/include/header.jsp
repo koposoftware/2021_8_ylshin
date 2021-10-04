@@ -42,19 +42,7 @@
            <ul class="menu-area-main">
    
              <li class="active"> <a href="${ pageContext.request.contextPath }">Home</a> </li>
-                          <%--     <li> <a href="/about.jsp">계좌생성</a> </li> --%>
-		<!-- 
-		<li class="nav-item dropdown">
-          <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink" role="button" data-bs-toggle="dropdown" aria-expanded="false">
-            계좌관리
-          </a>
-          <ul class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
-            <li><a class="dropdown-item" href="${ pageContext.request.contextPath }/account/accountOpen.do">계좌생성</a></li>
-            <li><a class="dropdown-item" href="${ pageContext.request.contextPath }/account/accountList.do">계좌조회</a></li>
-            <li><a class="dropdown-item" href="#">계좌송금</a></li>
-          </ul>
-      	</li>
-      	-->
+     
          
          <li class="nav-item dropdown">
          <a class="nav-link dropdown-toggle" href="${ pageContext.request.contextPath }/hanaro" id="navbarDropdownMenuLink" role="button" data-bs-toggle="dropdown" aria-expanded="false">
@@ -83,7 +71,6 @@
            	 대시보드
           </a>
           <ul class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
-<%--             <li><a class="dropdown-item" href="${ pageContext.request.contextPath }/spending/myCalendar">내 예산</a></li> --%>
             <li><a class="dropdown-item" href="${pageContext.request.contextPath}/dashBoard/budgetAnalysis">예산현황</a></li>
             <li><a class="dropdown-item" href="${pageContext.request.contextPath}/dashBoard/savingAnalysis">저축현황</a></li>
             <li><a class="dropdown-item" href="${pageContext.request.contextPath}/dashBoard/savingAnalysis">추천상품</a></li>
@@ -92,7 +79,7 @@
       	</li>
         
       
-<%-- 	    <li> <a href="${ pageContext.request.contextPath }/hanaro/dashBoard">대시보드</a> </li> --%>
+
 	              
       </ul>
       </nav>

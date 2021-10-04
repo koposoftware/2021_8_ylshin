@@ -286,28 +286,10 @@
 				 <div class="modals-default-cl">
 				         <div id="table-div">
 				         <table id="topSpending">
-				         	<tr>
-				         		<th>TOP1</th>
-				         		<th>쇼핑</th>
-				         		<td width="50%">
-				    
-				         		</td>
-				         	</tr>
-				         	<tr>
-				         		<th>TOP2</th>
-				         		<th>식사</th>
-				         		<td width="50%"><button>줄이기 도전</button></td>
-				         	</tr>
-				         	<tr>
-				         		<th>TOP3</th>
-				         		<th>운동</th>
-				         		<td width="50%"><button>줄이기 도전</button></td>
-				         	</tr>
+				         	
 				         </table>
 				         </div>
-				  <!--       <div id="topSpending">
-				        </div> -->
-				   
+				  
 			
 			
 	<!-- ----------------------------------------모달 --------------------------------------->
@@ -589,39 +571,5 @@ $(document).ready(function(){
 </td>
 		</tr>
 </script>
-<!-- <script>
-(function ($) {
-	 "use strict";
 
-		var ctx = document.getElementById("doughnutchart")
-		var doughnutchart = new Chart(ctx, {
-		    type: 'doughnut',
-		    data: {
-		    	labels: [
-		    	    'Red',
-		    	    'Blue',
-		    	    'Yellow'
-		    	  ],
-		    	  datasets: [{
-		    	    label: 'My First Dataset',
-		    	    data: [200000, 200000, 400000],
-		    	    backgroundColor: [
-		    	      'rgb(255, 99, 132)',
-		    	      'rgb(54, 162, 235)',
-		    	      'rgb(255, 205, 86)',
-		    	      'rgb(54, 205, 86)'
-		    	    ],
-		    	    hoverOffset: 4
-		    	  }]
-		    },
-		    options: {
-		      title: {
-		        display: true,
-		        text: 'Predicted world population (millions) in 2050'
-		      }
-		    }
-		});
-		
-})(jQuery); 
-</script> -->
 </html>
