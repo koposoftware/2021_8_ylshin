@@ -3,7 +3,7 @@
 [프로젝트 홈페이지 - https://koposoftware.github.io/template/](https://koposoftware.github.io/template/)
 
 # 1. 프로젝트 개요
-
+ <img src="./hanaro_service_img.JPG"/>
 하나의 통장을 관리 목적에 따라 기본금, 생활금, 비상금으로 분리하여 관리하는 통장쪼개기 서비스에 자산관리 서비스를 더했습니다.
 
 소비습관과 저축습관을 확립하지 못해 돈이 묶이는 예/적금 상품이 망설여지고, 여러 개의 통장관리가 부담스러웠던 사회 초년생들을 위한 분리형 통장으로 20대 고객 유입의 효과 또한 기대할 수 있습니다.
@@ -36,13 +36,13 @@
 서비스 기획 및 설계, 데이터베이스 구축 및 Front-End, Back-End 개발
 
 ## 사용 기술
-○ Spring MVC 기반 웹 어플리케이션 개발
-○ Java MailSender를 사용한 정기 메일 서비스
-○ CoolSMS API를 이용한 문자 알림 서비스
-○ FullCalendar 라이브러리를 활용한 자동 소비 달력 
-○ Spring Scheduler를 사용한 매월 자동 통장 쪼개기와 고객 별 금융 레포트 생성 및 발송
-○ Oracle PL/SQL을 활용한 기능 모듈화와 재사용
-○ Kakao API를 사용한 소셜 로그인 
+○ Spring MVC 기반 웹 어플리케이션 개발 <br>
+○ Java MailSender를 사용한 정기 메일 서비스 <br>
+○ CoolSMS API를 이용한 문자 알림 서비스<br>
+○ FullCalendar 라이브러리를 활용한 자동 소비 달력  <br>
+○ Spring Scheduler를 사용한 매월 자동 통장 쪼개기와 고객 별 금융 레포트 생성 및 발송 <br>
+○ Oracle PL/SQL을 활용한 기능 모듈화와 재사용 <br>
+○ Kakao API를 사용한 소셜 로그인 <br>
 
 ## 시스템 아키텍처
  <img src="./hanaro_architecture.JPG" width="640"/>
