@@ -1,6 +1,6 @@
-# 프로젝트 제목
+# HANARO 통장
 
-[프로젝트 홈페이지 - https://koposoftware.github.io/template/](https://koposoftware.github.io/template/)
+[프로젝트 홈페이지 - https://koposoftware.github.io/2021_8_yrshin/](https://koposoftware.github.io/2021_8_yrshin/)
 
 # 1. 프로젝트 개요
  <img src="./hanaro_service_img.JPG"/>
