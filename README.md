@@ -15,7 +15,6 @@
  
 
 # 3. 프로젝트 결과
-프로젝트 결과를 추가하세요. 발표자료. 시연동영상을 추가하세요.
 
 ## 발표 ppt 
    <img src="./hanaro_title_img.JPG" width="640"/>[발표자료](/project.pptx)<br>
@@ -23,9 +22,10 @@
 ## 시연 동영상 
 
   <iframe width="640" src="https://www.youtube.com/embed/BHhwsOoHDW4" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+
+
 # 4. 본인 소개
 
-본인 소개를 추가하세요
 
 |항목|내용||
 |-----|---------------------------|----|
@@ -38,20 +38,3 @@
 |대외활동|멋쟁이 사자처럼 7, 8기 인천대학교 교육 담당 운영진(2019년.03월 ~ 2020년 11월) <br>→ Python Django 교육 진행 및 웹 프로젝트 개발|
 |특기사항|  TOEIC |
 
-
-# 5. 기타
-그외 프로젝트를 더욱 설명할수 있는 것들을 추가하세요
-
-# 홈페이지 설정
- 본인 repository에서 "Setting"를 들어가서 GitHub Pages에서 설정 변경.
-* Source
- Source에서 원하는 branch와 directory 설정한다. 
- 기본값은 master 에 root를 설정 
- Save 버튼 꼭 누른다.
- 
- * Theme Chooser
- theme을 변경하여 좀더 이쁜 홈페이지를 만든다.
-   
-   <img src="homepage.JPG"/><br>
-   
- 
