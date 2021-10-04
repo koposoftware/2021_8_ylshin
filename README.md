@@ -17,7 +17,7 @@
 # 3. 프로젝트 결과
 
 ## 발표 ppt 
-   <img src="./hanaro_title_img.JPG" width="640"/>[발표자료](/project.pptx)<br>
+   <img src="./hanaro_title_img.JPG" width="640" height="360"/>[발표자료](/project.pptx)<br>
 
 ## 시연 동영상 
 
