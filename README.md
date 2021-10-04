@@ -49,7 +49,7 @@
  <img src="./hanaro_architecture.JPG" width="640"/>
  
 ## ERD
- <img src="./hanaro_erd.JPG" width="640"/>
+ <img src="./hanaro_erd.JPG"/>
  
 # 4. 본인 소개
 
