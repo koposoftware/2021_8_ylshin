@@ -15,7 +15,7 @@
 프로젝트 제안서를 설명하세요. 발표자료와 동영상을 추가하세요. 시스템의 아키텍쳐 설명도 추가하세요.
 
    <img src="./hanaro_title_img.JPG" width="640"/>[하나로통장 제안서](./proposal_hanaro.pdf)<br>
-   <iframe id="ytplayer" type="text/html" width="640" height="360" src="https://www.youtube.com/embed/6LxbdIjWP04" frameborder="0"></iframe>
+
  
 
 # 3. 프로젝트 결과
@@ -25,7 +25,7 @@
 
 ## 시연 동영상 
 
-  <iframe width="640" src="https://www.youtube.com/embed/BHhwsOoHDW4" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+  <iframe width="640" height="360" src="https://www.youtube.com/embed/BHhwsOoHDW4" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
 
  2021년 9월 6일 ~ 2021년 10월 5일
 
