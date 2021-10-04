@@ -57,7 +57,7 @@
 |항목|내용||
 |-----|---------------------------|----|
 |이름 |신예린|<img src="./profile.jpg" width="120px">|
-|연락처 | dpfls0106@naver.com|
+|연락처 | dpfls0106(@)naver.com|
 |skill set| Frontend - HTML, CSS, Javascript|
 | | Backend - Java, Spring, Oracle, Python, Django |
 |자격증| 정보처리기사, SQLD |
