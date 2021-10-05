@@ -90,9 +90,29 @@ public class DashBoardController {
 		int userCode = loginMember.getUserCode();
 	
 		HanaroVO hanaro = hanaroAccService.selectHanaroAcc(userCode);
-		System.out.println(hanaro);
 		ModelAndView mav = new ModelAndView("dashBoard/savingAnalysis");
 		mav.addObject("savingBalance", hanaro.getSavingBalance());
+		
+		ProductSearchInfoVO searchInfo = new ProductSearchInfoVO();
+		int birthYear = Integer.parseInt(loginMember.getSs1().substring(0, 2));
+		System.out.println(birthYear);
+		Calendar cal = Calendar.getInstance();
+		int year = cal.get(Calendar.YEAR);
+		System.out.println("year : "+year);
+		if(birthYear >=(year-2000)) {
+			birthYear += 1900;
+			}else {
+				birthYear += 2000;
+			}
+		
+		int age = year - birthYear;
+		searchInfo.setAge(age);
+		searchInfo.setSavingMoney(hanaro.getSavingBalance());
+		searchInfo.setType(null);
+		
+		List<SavingProductVO> recommendProductList = dashBoardservice.recommendProductList(searchInfo);
+		mav.addObject("recommendProductList",recommendProductList);
+		
 		
 		return mav;
 	}
@@ -112,6 +132,9 @@ public class DashBoardController {
 	
 	
 	//------------------------------- 예/적금 추천 --------------------------------------
+	
+	
+	
 	
 	@ResponseBody
 	@PostMapping("/dashBoard/savingProductList")

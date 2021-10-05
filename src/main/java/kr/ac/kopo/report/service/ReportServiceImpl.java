@@ -135,16 +135,13 @@ public class ReportServiceImpl implements ReportService {
 				
 				
 				
-				
-				String tranStr = "		<div class=\"title \" style=\"padding-bottom : 0px\">08월 큰 지출</div>\r\n"
-				+ "				<h4 style=\"font-size : 20px; margin-bottom : 30px \">충동적인 소비가 아니었는지 되돌아보세요!</h4>\r\n"
-				+ "				<table style=\"text-align : left; border-right : 2px solid #dddddd; height : 160px\">\r\n"			;	
+				String tranStr = "";
 				
 				for(int k =0; k < 3; k++) {
 					
 					SpendingInfoVO spending = spendingInfoList.get(k);
 					
-				tranStr += "					<tr>\r\n"
+				tranStr  = "					<tr>\r\n"
 				+ "					<th>TOP"+k+"</th>\r\n"
 				+ "					<td>"+spending.getCategory()+"</td>\r\n"
 				+ "					<td>"+spending.getSpendingMoney()+"원</td>\r\n"
@@ -154,18 +151,10 @@ public class ReportServiceImpl implements ReportService {
 				tranStr +="				</table>\r\n"
 				+ "			</div>\r\n"
 				+ "				<div class=\"col-md-6\">\r\n"
-				+ "					<div class=\"title \" style=\"padding-bottom : 0px\">08월 잦은 지출</div>\r\n"
+				+ "					<div class=\"title \" style=\"padding-bottom : 0px\">"+nowMonth+"월 잦은 지출</div>\r\n"
 				+ "					<h4 style=\"font-size : 20px; margin-bottom : 30px\">습관적인 방문으로 인한 소비가 아닌지 확인하세요!</h4>\r\n"
-				+ "				<table style=\"height : 160px; margin-bottom: 30px\">\r\n"
-				+ "				<tr>\r\n"
-				+ "					<th>TOP1</th>\r\n"
-				+ "					<td>올리브영연세로점</td>\r\n"
-				+ "					<td>7회</td>\r\n"
-				+ "					</tr>\r\n"
-				+ "				</table>\r\n"
-				+ "				</div>		\r\n"
-				+ "				</div>		\r\n";
-				
+				+ "				<table style=\"height : 160px; margin-bottom: 30px\">\r\n";
+		
 				
 				
 				
@@ -421,8 +410,12 @@ public class ReportServiceImpl implements ReportService {
 						+ "		\r\n"
 						+ "		\r\n"
 						+ "		<div class=\"row\">\r\n"
-						+ "		<div class=\"col-md-6\">\r\n";
-					
+						+ "		<div class=\"col-md-6\">\r\n"
+				
+					+"<div class=\"title \" style=\"padding-bottom : 0px\">"+nowMonth+"월 큰 지출</div>\r\n"
+						+ "				<h4 style=\"font-size : 20px; margin-bottom : 30px \">충동적인 소비가 아니었는지 되돌아보세요!</h4>\r\n"
+						+ "				<table style=\"text-align : left; border-right : 2px solid #dddddd; height : 160px\">\r\n"			;	
+				
 					str +=tranStr;
 					str += "	\r\n"
 						+ "</div>\r\n"

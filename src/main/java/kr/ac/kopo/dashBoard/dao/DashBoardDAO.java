@@ -26,6 +26,8 @@ public interface DashBoardDAO {
 	//월별 저축액
 	List<SplitHistoryVO> monthlySaving(String accountNo);
 	
+	//추천 list
+	List<SavingProductVO> recommendProductList(ProductSearchInfoVO searchInfo);
 	//검색 조건 and 고객 조건의 예/적금 list
 	List<SavingProductVO> savingProductList(ProductSearchInfoVO searchInfo);
 	

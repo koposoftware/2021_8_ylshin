@@ -607,13 +607,13 @@ $(document).ready(function(){
 				                    <div class="bar-chart-wp sm-res-mg-t-30 chart-display-nn">
 				                        <canvas height="140vh" width="180vw" id="barchart1"></canvas>
 				                    </div>
-				                    <h2><span style="font-size : 20px;">(최근 6개월)</span>한달 평균 저축액 : 76.3만원</h2>	
+				                    <h2></h2>	
 				                </div>
 				                <div class="col-md-6">
 				                    <div class="bar-chart-wp sm-res-mg-t-30 chart-display-nn">
 				                        <canvas height="140vh" width="180vw" id="linechart"></canvas>
 				                    </div>
-				                    <h2> 하나로 통장 총 보유 저축금 : 459.4만원</h2>
+				                    <h2> </h2>
 				                </div>
 				            </div>
 		
@@ -639,18 +639,20 @@ $(document).ready(function(){
 					  	<!-- service --> 
 					  	<!-- #f5f7fb -->
 					  	<table style="width : 1100px; margin : 40px auto; background: #eff2f7">
+					  	
+					  	<c:forEach items="${ recommendProductList }" var="recommendProduct" varStatus="loop">
 					  	<tr style="border: 5px white solid;">
 					  		<td width="11%"><img style="width : 60px; margin-left : 40px" src="${pageContext.request.contextPath}/resources/icon/medal1.png"></td>
 					  		<td>
 					  		  <div class="row">
 				                    <div class="col-md-6" style="text-align : center;">
-				                    <h2 style="margin-top : 40px;">하나 원큐 적금<span style="font-size: 19px; color : #009b9d"> 정기적금</span> </h2>
+				                    <h2 style="margin-top : 40px;"><span style="font-size: 19px; color : #009b9d"> ${ recommendProduct.name }</span> </h2>
 				                                   
-				                     <h4 id="accountNo">간편하게 우대금리를 제공하는 스마트폰 적금</h4>
+				                     <h4 id="accountNo">${ recommendProduct.description }</h4>
 				                    </div>
 				                    <div class="col-md-3">
-				                     <span style="font-size : 15px">기본 금리</span><h2>1.0%</h2>
-				                     <span style="font-size : 15px">최대 금리</span><h2>2.3%</h2>
+				                     <span style="font-size : 15px">기본 금리</span><h2>${ recommendProduct.interestRate }</h2>
+				                     <span style="font-size : 15px">최대 금리</span><h2>${ recommendProduct.maxPRate }</h2>
 				                    </div>
 				                  	<div class="col-md-2" style="padding-top : 20px">
 				                  	<button class="read-more">상세보기</button>
@@ -659,48 +661,9 @@ $(document).ready(function(){
 				                  	</div>
 					  		</td>
 					  	</tr>
-					  	<tr style="border: 5px white solid;">
-					  		<td><img style="width : 60px; margin-left : 40px" src="${pageContext.request.contextPath}/resources/icon/medal2.png"></td>
-					  		<td>
-					  		  <div class="row">
-				                    <div class="col-md-6" style="text-align : center;">
-				                    <h2 style="margin-top : 40px;">하나 더 예금 <span style="font-size: 19px; color : #009b9d"> 정기예금</span> </h2>
-				                                   
-				                     <h4 id="accountNo">목돈마련의 기본, 재테크의 시작!</h4>
-				                    </div>
-				                    <div class="col-md-3">
-				                     <span style="font-size : 15px">기본 금리</span><h2>0.9%</h2>
-				                     <span style="font-size : 15px">최대 금리</span><h2>1.4%</h2>
-				                    </div>
-				                  	<div class="col-md-2" style="padding-top : 20px">
-				                  	<button class="read-more">상세보기</button>
-				                  	<button class="read-more">가입하기</button>
-				                  	</div>
-				                  	</div>
-					  		
-					  		</td>
-					  	</tr>
-					  	<tr style="border: 5px white solid;">
-					  		<td><img style="width : 60px; margin-left : 40px" src="${pageContext.request.contextPath}/resources/icon/medal3.png"></td>
-					  		<td>
+					  	</c:forEach>
 				
-				                  	  <div class="row">
-				                    <div class="col-md-6" style="text-align : center;">
-				                    <h2 style="margin-top : 40px;">주거래 정기예금<span style="font-size: 19px; color : #009b9d"> 정기예금</span> </h2>
-				                                   
-				                     <h4 id="accountNo"> KEB하나은행 주거래 고객을 위한 주거래 정기예금</h4>
-				                    </div>
-				                    <div class="col-md-3">
-				                     <span style="font-size : 15px">기본 금리</span><h2>0.75%</h2>
-				                     <span style="font-size : 15px">최대 금리</span><h2>1.25%</h2>
-				                    </div>
-				                  	<div class="col-md-2" style="padding-top : 20px">
-				                  	<button class="read-more">상세보기</button>
-				                  	<button class="read-more">가입하기</button>
-				                  	</div>
-				                  	</div>
-					  		</td>
-					  	</tr>
+					  	
 					  	
 					  	</table>
     <!--   <div class="service">

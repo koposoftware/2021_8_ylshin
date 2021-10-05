@@ -65,24 +65,14 @@ public class DashBoardServiceImpl implements DashBoardService {
 		List<SplitHistoryVO> savingSplitList = dao.monthlySaving(accountNo);
 		System.out.println(savingSplitList);
 		
-/*		
-		Calendar cal = Calendar.getInstance();
-		int year = cal.get(Calendar.YEAR);
-		int month = cal.get(Calendar.MONTH) +1;
-		System.out.println("year : "+year);
-		System.out.println("month : "+month);
-*/		
 		
 		List<SplitHistoryVO> splitToSaving = new ArrayList<SplitHistoryVO>();
 		List<SplitHistoryVO> splitFromSaving = new ArrayList<SplitHistoryVO>();
 	
-		//	Map<String, Integer> monthlySaving = new HashMap<String, Integer>();
 		
 		List<MonthlySavingVO> monthlySavingList = new ArrayList<MonthlySavingVO>();
 		
-		/* int beginMonth = month -6; */
-		// split To 비상금, split From 비상금 분리
-		
+
 		for(SplitHistoryVO saving : savingSplitList) {
 			if(saving.getSplitTo().equals("saving_balance")) {
 				splitToSaving.add(saving);	
@@ -111,20 +101,19 @@ public class DashBoardServiceImpl implements DashBoardService {
 			monthlySavingList.add(monthlySaving);		
 		}
 		
-		/*		 * //key 큰순서로 정렬 Object[] mapkey = monthlySaving.keySet().toArray();
-		 * Arrays.sort(mapkey);
-		 * 
-		 * 
-		 * for (String nKey : monthlySaving.keySet()) {
-		 * System.out.println("sort : "+mapkey); }
-		 */
 
-		//System.out.println("저축 service !!! " + monthlySavingList);
 		return monthlySavingList;
 	}
 
 	
 	//--------------------------------------예/적금 -------------------------------------------
+	public List<SavingProductVO> recommendProductList(ProductSearchInfoVO searchInfo) {
+		
+		List<SavingProductVO> recommendProductList = dao.recommendProductList(searchInfo);
+		
+		return recommendProductList;
+	}
+	
 	
 	public List<SavingProductVO> savingProductList(ProductSearchInfoVO searchInfo) {
 		

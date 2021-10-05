@@ -17,20 +17,7 @@ public class DashBoardDAOImpl implements DashBoardDAO {
 	
 	@Autowired
 	private SqlSessionTemplate sqlSessionTemplate;
-	
-	/*
-	 * public AutoSplitVO myMonthlySplit(String accountNo) {
-	 * 
-	 * AutoSplitVO monthlySplit =
-	 * sqlSessionTemplate.selectOne("dashBoard.DashBoardDAO.myMonthlySplit",
-	 * accountNo); System.out.println("dao : "+monthlySplit); return monthlySplit; }
-	 * 
-	 * public FixedExpenseVO myMonthlyFixedExpense(String accountNo) {
-	 * FixedExpenseVO monthlyFixedExpense =
-	 * sqlSessionTemplate.selectOne("dashBoard.DashBoardDAO.myMonthlyFixedExpense",
-	 * accountNo); System.out.println("dao : "+monthlyFixedExpense); return
-	 * monthlyFixedExpense; }
-	 */
+
 	public MonthlyBudgetVO myMonthlySplit(String accountNo) {
 		
 		MonthlyBudgetVO monthlySplit = sqlSessionTemplate.selectOne("dashBoard.DashBoardDAO.myMonthlySplit", accountNo);
@@ -70,6 +57,13 @@ public class DashBoardDAOImpl implements DashBoardDAO {
 	}
 
 	//----------------------------------------예/적금 ---------------------------------------
+	public List<SavingProductVO> recommendProductList(ProductSearchInfoVO searchInfo) {
+	
+		List<SavingProductVO> recommendProductList = sqlSessionTemplate.selectList("dashBoard.DashBoardDAO.recommendProduct" , searchInfo);
+	
+		return recommendProductList;
+	}
+	
 	//검색 조건 and 고객 조건의 예/적금 list
 	public List<SavingProductVO> savingProductList(ProductSearchInfoVO searchInfo) {
 		

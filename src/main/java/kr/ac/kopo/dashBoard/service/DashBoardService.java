@@ -18,6 +18,8 @@ public interface DashBoardService {
 	//월별 저축액
 	List<MonthlySavingVO> monthlySaving(String accountNo);
 	
+	List<SavingProductVO> recommendProductList(ProductSearchInfoVO searchInfo);
+	
 	//검색 조건 and 고객 조건의 예/적금 list
 	List<SavingProductVO> savingProductList(ProductSearchInfoVO searchInfo);
 	
