@@ -25,7 +25,7 @@
 
 ## 시연 동영상 
 <a target="_blank" rel="noopener noreferrer" href="https://www.youtube.com/embed/BHhwsOoHDW4">
-<img src="./play_img.png" style="width:800px;">
+<img src="./play_img.png" style="width:640px;">
 </a><br>
 
 
