@@ -24,9 +24,9 @@
    <img src="./hanaro_title_img.JPG" width="640" height="360"/>[발표자료](/project.pptx)<br>
 
 ## 시연 동영상 
-
-  <iframe width="640" height="360" src="https://www.youtube.com/embed/BHhwsOoHDW4" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
-
+<a target="_blank" rel="noopener noreferrer" href="https://www.youtube.com/embed/BHhwsOoHDW4">
+<img src="mainPage.JPG" style="width:800px;">
+</a><br>
 
 
 
